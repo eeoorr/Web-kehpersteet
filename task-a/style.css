@@ -1,0 +1,19 @@
+/*
+Author: Eero Sormunen
+Date: 2025-09-24
+*/
+
+
+h1  {
+    color: blue;
+    font-size: 2.5em;
+}
+body {
+    background-color: #800080;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 40px;
+    font-size: 1.8em;
+}
+p {
+    color: #4b0084;
+}
