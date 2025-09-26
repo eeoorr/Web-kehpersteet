@@ -1,0 +1,47 @@
+/* [Function: Set background colour for whole page] */
+body {
+    background-color: rgb(44, 6, 51);
+font-family: Arial, sans-serif;
+color: #2c3e50;
+margin: 40;
+padding: 0;
+line-height: 1.6;
+}
+
+/* [Function: Style for main heading] */
+h1 {
+    color: #34495e;
+    font-size: 2rem;
+    text-align: center;
+    margin: 40px;
+}
+/* [Function: Style for paragraphs] */
+p {
+    color: #34495e;
+line-height: 1.6;
+}
+/* Custom list styles */
+ul {
+    list-style-type: square;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+ol {
+    background-color: #d5f5e3;
+    padding: 20px;
+    border-radius: 8px;
+    list-style-type: upper-roman;
+}
+
+/* link syles */
+a {
+    color: #8e44ad;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #16a085;
+    text-decoration: underline;
+}
