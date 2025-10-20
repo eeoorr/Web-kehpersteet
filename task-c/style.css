@@ -4,10 +4,11 @@ Date: 2025-10-20
 */
 img, video {
     width: 100%;
-    max-width: 500px;
-    display: block;
-    margin: 20px auto; /* Center the media elements */
+    max-width: 500px !important;
     height: auto;
+    display: block;
+    margin: 20px auto;
+    
 }
 body {
     font-family: Arial, sans-serif;
