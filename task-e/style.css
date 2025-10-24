@@ -25,7 +25,7 @@ Date: 2025-10-24
 /* ≤ 640px: margins 1%, show only the table */
 @media (max-width: 640px) {
   .content { margin-left: 1%; margin-right: 1%; }
-  .student-info { display: none; }
+  .student-info { display: none !important; }
 }
 
 :root {
