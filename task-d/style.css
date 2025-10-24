@@ -61,5 +61,5 @@ img[alt*="Pexels pehmoapina"] {
 a[target="_blank"] {
     color: orange;
     font-weight: bold;
-    margin: center;
+    align-items: center;
 }
