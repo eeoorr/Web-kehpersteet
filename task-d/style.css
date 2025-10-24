@@ -8,7 +8,7 @@ h1, p {
 }
 
 /* Class */
-.highlight {
+.box, .highlight {
     background-color: yellow;
 }
 
@@ -20,6 +20,7 @@ h1, p {
 }
 
 /* Group */
+h1,
 h2,
 h3 {
     font-family: 'Georgia', serif;
