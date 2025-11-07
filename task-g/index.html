@@ -45,10 +45,31 @@
           </fieldset>
 
           <div class="form-row">
-            <button id="addRowBtn" type="submit" class="btn">Add row</button>
-            <button id="clearBtn" type="reset" class="btn btn-secondary">Clear</button>
+            <label for="birthDate">Birth date
+              <input id="birthDate" name="birthDate" type="date" required>
+            </label>
+          </div>
+          <p class="error" id="birthDateError"></p>
+          
+          <div class="form-row">
+            <label>
+                <input
+                 id="terms"
+                 name="terms"
+                 type="checkbox"
+                 aria-describedby="termsError"
+                 >
+                 I accept the terms and conditions
+            </label>
+          </div>
+          <p class="error" id="termsError"></p>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Submit</button>
+            <button type="reset" class="btn btn-secondary">Clear</button>
           </div>
         </form>
+
       </section>
     </div>
 
@@ -57,9 +78,11 @@
       <table class="table" id="timetable">
         <thead>
           <tr>
-            <th>Course</th>
-            <th>Tue</th>
-            <th>Fri</th>
+            <th>Timestamp</th>
+            <th>Full name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Birth date</th>
           </tr>
         </thead>
         <tbody>
