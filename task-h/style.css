@@ -12,6 +12,9 @@ Date: 2025-11-07
    - Borders: light gray (#d0d7e2)
 */
 
+
+/*  Everything is coment now!
+
 :root {
   --base-size: 1rem;
   --h1-size: 1.6rem;
@@ -38,7 +41,7 @@ body {
   font-size: var(--base-size);
 }
 
-/* Header */
+/* Header 
 .site-header {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -46,13 +49,16 @@ body {
   color: #fff;
 }
 
+
+/*  Everything is coment now!
+
 .site-header h1 {
   font-size: var(--h1-size);
   margin: 0;
   text-align: center;
 }
 
-/* Content container with side margins */
+/* Content container with side margins 
 .content {
   margin-left: 15%;
   margin-right: 15%;
@@ -60,7 +66,7 @@ body {
   padding-bottom: 2rem;
 }
 
-/* --- NEW: top row split (50% + 50%) --- */
+/* --- NEW: top row split (50% + 50%) --- 
 .top-grid {
   display: flex;
   gap: 1rem;
@@ -144,7 +150,7 @@ body {
   background: #ffffff;
 }
 
-/* Table container */
+/* Table container 
 .table-wrap {
   background: #fff;
   border: 1px solid var(--border);
@@ -154,14 +160,14 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-/* Table */
+/* Table *
 .table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1rem;
 }
 
-/* Header cells */
+/* Header cells *
 .table thead th {
   background: var(--brand);
   color: #fff;
@@ -170,18 +176,18 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-/* Body cells */
+/* Body cells *
 .table tbody td {
   padding: 0.6rem 0.75rem;
   border-bottom: 1px solid var(--border);
 }
 
-/* Alternate row color */
+/* Alternate row color *
 .table tbody tr:nth-child(even) {
   background: var(--table-alt);
 }
 
-/* Column widths: 40% + 12%*5 = 100% */
+/* Column widths: 40% + 12%*5 = 100% *
 .table thead th:nth-child(1),
 .table tbody td:nth-child(1) {
   width: 40%;
@@ -193,7 +199,7 @@ body {
   text-align: center;
 }
 
-/* Small screens: stack the top blocks */
+/* Small screens: stack the top blocks *
 @media (max-width: 860px) {
   .content {
     margin-left: 5%;
@@ -205,7 +211,7 @@ body {
   }
 }
 
-/* ≤ 768px: margins 5% */
+/* ≤ 768px: margins 5% *
 @media (max-width: 768px) {
   .content {
     margin-left: 5%;
@@ -224,7 +230,7 @@ body {
   }
 }
 
-/* ≤ 640px: margins 1%, show only the table */
+/* ≤ 640px: margins 1%, show only the table *
 @media (max-width: 640px) {
   .content {
     margin-left: 1%;
@@ -235,3 +241,6 @@ body {
     display: none;
   }
 }
+
+
+*/
