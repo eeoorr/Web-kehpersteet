@@ -152,3 +152,40 @@ body {
     margin: 1rem;
   }
 }
+
+/* ===== Product Grid ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ===== Product Image ===== */
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ===== Product Details ===== */
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #0b132b;
+}
+
+/* ===== Product Description ===== */
+.product-card p {
+  margin: 0 1rem 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
