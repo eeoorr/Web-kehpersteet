@@ -60,11 +60,12 @@ section h2 {
   margin-bottom: 0.75rem;
   color: #0b132b;
   border-bottom: 2px solid #3a506b;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
 }
 
 section p {
   margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -128,7 +129,7 @@ footer {
 }
 body {
   font-family: 'Arial', sans-serif;
-  background-image: url('stadium.jpeg');  /* path to your image */
+  background-image: url('images/lumiseina.jpg');  /* path to your image */
   background-size: cover;       /* fill the whole screen */
   background-position: center;  /* keep it centered */
   background-attachment: fixed; /* make it stay while scrolling */
