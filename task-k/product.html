@@ -38,9 +38,28 @@
           <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
         </div>
 
-        <button type="submit" style="background: #3a506b; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; font-weight: bold;">
-          Submit Order
-        </button>
+        <!-- Rental Details -->
+        <h3 style="color: #0b132b; margin: 1rem 0 0.75rem;">Rental Details</h3>
+
+        <!-- Snow Shovel Selection -->
+        <div style="margin-bottom: 1rem;">
+          <label for="shovel" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Snow Shovel to Rent</label>
+            <select id="shovel" name="shovel" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;" onchange="updateQuantityLimits()">
+              <option value="">-- Select a model --</option>
+              <option value="SSSS6000">SUPER SNOW SHINE SHOVEL 6000™ (€75/wk)</option>
+              <option value="SSSSX6000">SUPER SNOW SHINE SHOVEL XTREME 6000™ (€125/wk)</option>
+              <option value="SSSSCH100">CHEAPSSKATE 100™ (€10/wk)</option>
+              <option value="SSSSCH200">CHEAPSSKATE 200™ (€15/wk)</option>
+              <option value="SSSSCH300">CHEAPSSKATE 300™ (€20/wk)</option>
+              <option value="SSSSCH400">CHEAPSSKATE 400™ (€25/wk)</option>
+            </select>
+        </div>
+
+          <!-- Quantity -->
+         <div style="margin-bottom: 1rem;">
+            <label for="quantity" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Quantity</label>
+            <input type="number" id="quantity" name="quantity" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
+          </div>
         
         <!-- Rental Week -->
         <div style="margin-bottom: 1rem;">
@@ -57,8 +76,14 @@
               <option value="2026-W05">Week 05: Jan 26 – Feb 01, 2026</option>
               <option value="2026-W06">Week 05: Feb 02 – Feb 08, 2026</option>
               <option value="2026-W07">Week 05: Feb 09 – Feb 15, 2026</option>
-  </select>
+        </select>
         </div>
+
+        <!-- The Submit Button -->
+        <button type="submit" style="background: #3a506b; color: white; padding: 0.7rem 1rem; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; font-weight: bold;">
+          Submit Order
+        </button>
+
       </form>
     </section>
   </main>   
