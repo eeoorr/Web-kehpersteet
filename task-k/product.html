@@ -57,9 +57,11 @@
 
           <!-- Quantity -->
          <div style="margin-bottom: 1rem;">
-            <label for="quantity" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Quantity</label>
-            <input type="number" id="quantity" name="quantity" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
-          </div>
+           <label for="quantity" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Quantity</label>
+           <input type="number" id="quantity-cheap" name="quantity" min="1" max="20" style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem; display: none;">
+           <input type="number" id="quantity-premium" name="quantity" min="1" max="1" value="1" style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
+           <small id="quantity-help" style="color: #555; display: block; margin-top: 0.5rem;">Only 1 available for premium models.</small>
+         </div>
         
         <!-- Rental Week -->
         <div style="margin-bottom: 1rem;">
@@ -92,5 +94,18 @@
     <p>© 2025 Super Snow Shine Shovel™. All rights reserved.</p>
   </footer>
   <img src="example.jpg" alt="hidden-image" style="display:none;">
+
+            <!-- Script For The Order Quantity -->
+<script>
+  document.getElementById("shovel").onchange = function() {
+  const cheapModels = ["SSSSCH100", "SSSSCH200", "SSSSCH300", "SSSSCH400"];
+  const isCheap = cheapModels.includes(this.value);
+  document.getElementById("quantity-cheap").style.display = isCheap ? "block" : "none";
+  document.getElementById("quantity-premium").style.display = isCheap ? "none" : "block";
+  document.getElementById("quantity-cheap").required = isCheap;
+  document.getElementById("quantity-premium").required = !isCheap;
+  };
+</script>
+  
 </body>
 </html>
