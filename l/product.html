@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumilapioiden vuokrauspalvelu</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>SUPER SNOW SHINE SHOVEL™</h1>
+    <nav>
+      <a href="index.html">About us</a>
+      <a href="catalogue.html">View Catalogue</a>
+      <a href="product.html">Make an Order</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Order Now!</h2>
+      <form onsubmit="event.preventDefault(); window.location.href='thankyouforordering.html';">
+        <!-- Full Name -->
+        <div style="margin-bottom: 1rem;">
+          <label for="fullname" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
+        </div>
+
+        <!-- Email Address -->
+        <div style="margin-bottom: 1rem;">
+          <label for="email" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Email Address</label>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
+        </div>
+
+        <!-- Phone Number -->
+        <div style="margin-bottom: 1rem;">
+          <label for="phone" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
+        </div>
+
+        <!-- Rental Details -->
+        <h3 style="color: #0b132b; margin: 1rem 0 0.75rem;">Rental Details</h3>
+
+        <!-- Snow Shovel Selection -->
+        <div style="margin-bottom: 1rem;">
+          <label for="shovel" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Snow Shovel to Rent</label>
+            <select id="shovel" name="shovel" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;" onchange="updateQuantityLimits()">
+              <option value="">-- Select a model --</option>
+              <option value="SSSS6000">SUPER SNOW SHINE SHOVEL 6000™ (€75/wk)</option>
+              <option value="SSSSX6000">SUPER SNOW SHINE SHOVEL XTREME 6000™ (€125/wk)</option>
+              <option value="SSSSCH100">CHEAPSSKATE 100™ (€10/wk)</option>
+              <option value="SSSSCH200">CHEAPSSKATE 200™ (€15/wk)</option>
+              <option value="SSSSCH300">CHEAPSSKATE 300™ (€20/wk)</option>
+              <option value="SSSSCH400">CHEAPSSKATE 400™ (€25/wk)</option>
+            </select>
+        </div>
+
+          <!-- Quantity -->
+         <div style="margin-bottom: 1rem;">
+           <label style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Quantity</label>
+           <input type="number" id="quantity-cheap" name="quantity" min="1" max="20" style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem; display: none;">
+           <input type="number" id="quantity-premium" name="quantity" min="1" max="1" value="1" style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
+           <small id="quantity-help" style="color: #555; display: block; margin-top: 0.5rem;">Maximum of 1 for SSSS6000™ models.</small>
+         </div>
+        
+        <!-- Rental Week -->
+        <div style="margin-bottom: 1rem;">
+          <label for="rental-week" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Rental Week</label>
+          <select id="rental-week" name="rental-week" required style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;">
+              <option value="">-- Select a week --</option>
+              <option value="2025-W50">Week 50: Dec 8 – Dec 14, 2025</option>
+              <option value="2025-W51">Week 51: Dec 15 – Dec 21, 2025</option>
+              <option value="2025-W52">Week 52: Dec 22 – Dec 28, 2025</option>
+              <option value="2026-W01">Week 01: Dec 29, 2025 – Jan 4, 2026</option>
+              <option value="2026-W02">Week 02: Jan 5 – Jan 11, 2026</option>
+              <option value="2026-W03">Week 03: Jan 12 – Jan 18, 2026</option>
+              <option value="2026-W04">Week 04: Jan 19 – Jan 25, 2026</option>
+              <option value="2026-W05">Week 05: Jan 26 – Feb 01, 2026</option>
+              <option value="2026-W06">Week 06: Feb 02 – Feb 08, 2026</option>
+              <option value="2026-W07">Week 07: Feb 09 – Feb 15, 2026</option>
+        </select>
+        </div>
+
+
+        <!-- Consent And  -->
+       <div style="margin-top: 1rem;">
+         <label for="message" style="display: block; margin-bottom: 0.5rem; color: #0b132b; font-weight: bold;">Special Wishes or Message To Us</label>
+         <textarea id="message" name="message" rows="4" style="width: 100%; padding: 0.7rem; border: 1px solid #3a506b; border-radius: 5px; font-size: 1rem;"></textarea>
+       </div>
+
+       <div style="margin-top: 1rem;">
+         <label style="display: block; margin-bottom: 0.5rem; color: #0b132b;">
+           <input type="checkbox" name="consent" required style="margin-right: 0.5rem;">
+           I accept the terms and policy
+         </label>
+       </div>
+
+        <!-- The Submit Button -->
+        <button type="submit" style="background: #3a506b; color: white; padding: 0.7rem 1rem; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; font-weight: bold;">
+          Submit My Order
+        </button>
+
+      </form>
+    </section>
+  </main>   
+
+  <footer>
+    <p>© 2025 Super Snow Shine Shovel™. All rights reserved.</p>
+  </footer>
+  <img src="example.jpg" alt="hidden-image" style="display:none;">
+
+            <!-- Script For The Order Quantity -->
+<script>
+  document.getElementById("shovel").onchange = function() {
+  const cheapModels = ["SSSSCH100", "SSSSCH200", "SSSSCH300", "SSSSCH400"];
+  const isCheap = cheapModels.includes(this.value);
+  document.getElementById("quantity-cheap").style.display = isCheap ? "block" : "none";
+  document.getElementById("quantity-premium").style.display = isCheap ? "none" : "block";
+  document.getElementById("quantity-cheap").required = isCheap;
+  document.getElementById("quantity-premium").required = !isCheap;
+  };
+</script>
+  
+</body>
+</html>
