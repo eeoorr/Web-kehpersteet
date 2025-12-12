@@ -14,5 +14,5 @@ Example changes:
 And now the actual changes:   -->
 
 12/12/2025 13:47
-This directory "l" is identical to directories "task-k" & "task-l".
+Besides having this "README.md", as of now, this directory "l" is identical to directories "task-k" & "task-l".
 
